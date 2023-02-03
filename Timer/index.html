@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer</title>
+  <link rel="stylesheet" href="timer.css">
+  <link rel="shortcut icon" href="timer.png" type="image/x-icon">
+  <script src="timer.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
 
+</head>
+<body>
+  <div class="container">
+    <div class="container-segment">
+      <div class="segment-title">Hours</div>
+      <div class="segment">
+        <div class="flip-card" data-hours-tens>
+          <div class="top">0</div>
+          <div class="bottom">0</div>
+        </div>
+        <div class="flip-card" data-hours-ones>
+          <div class="top">0</div>
+          <div class="bottom">0</div>
+        </div>
+      </div>
+    </div>
+    <div class="container-segment">
+      <div class="segment-title">Minutes</div>
+      <div class="segment">
+        <div class="flip-card" data-minutes-tens>
+          <div class="top">0</div>
+          <div class="bottom">0</div>
+        </div>
+        <div class="flip-card" data-minutes-ones>
+          <div class="top">0</div>
+          <div class="bottom">0</div>
+        </div>
+      </div>
+    </div>
+    <div class="container-segment">
+      <div class="segment-title">Seconds</div>
+      <div class="segment">
+        <div class="flip-card" data-seconds-tens>
+          <div class="top">0</div>
+          <div class="bottom">0</div>
+        </div>
+        <div class="flip-card" data-seconds-ones>
+          <div class="top">0</div>
+          <div class="bottom">0</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="set">
+    <p>Set time</p>
+    <div class="setter"></div>
+    <div class="inputs">
+      <div class="input">
+        <input onclick="changeTime()" value="0" min="0" max="24" type="number" id="hours" class="button_s minutes_pick">
+        <label for="minutes_pick">Hours</label>
+      </div>
+      <div class="input">
+        <input onclick="changeTime()" value="0" min="0" max="59" type="number" id="min" class="button_s minutes_pick">
+        <label for="minutes_pick">Min</label>
+      </div>
+      <div class="input">
+        <input onclick="changeTime()" value="0" min="0" max="59" type="number" id="sec" class="button_s minutes_pick">
+        <label for="minutes_pick">Sec</label>
+      </div>
+    </div>
+    <div class="buttons_set">
+      <button class="button_set" onclick="countTime()">Start</button>
+      <button class="button_set" id="stop"onclick="stop()">Stop</button>
+      <button class="button_set" onclick="restart()">Restart</button>
+    </div>
+  </div>
+</body>
+</html>
