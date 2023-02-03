@@ -1,0 +1,48 @@
+*{
+    background-color: black;
+    color: white
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+a{
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    height: 40px;
+    width: 500px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 10px;
+
+    /* Text */
+    font-family: "Courier New", Courier, monospace;
+    padding-top: 10px;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.time{
+    background-color: #596269;
+}
+
+.timer{
+    background-color: #041423;
+}
+
+.stopwatch{
+    background-color: #21292c;
+}
